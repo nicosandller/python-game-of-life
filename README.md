@@ -30,4 +30,8 @@ while True:
   game.next()
   time.sleep(1)
 ```
+
+## Screenshots:
+
+![Alt text](/img1.jpg?raw=true "Optional Title")
   
