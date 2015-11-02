@@ -33,5 +33,5 @@ while True:
 
 ## Screenshots:
 
-![Alt text](/img1.jpg?raw=true "Optional Title")
+![Alt text](/img1.png?raw=true "Optional Title")
   
