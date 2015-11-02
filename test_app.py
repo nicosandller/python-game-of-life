@@ -1,23 +1,23 @@
 import unittest
+from board import Board
+
+game = Board(10)
+
 
 class TestStringMethods(unittest.TestCase):
 
-    def test_grid(self):
-        self.assertTrue(True)
+    def test_pos_to_analyze(self):
+        #We need to test that neither of the positions in the set that results from  pos_to_analize is outside dimensions
+        xmax = game.dim
+        ymax = game.dim
+        #Add a cell outside dimensions
+        game.add_cell(pos=(game.dim + 1 ,game.dim + 1))
+        #add a cell inside dimensions
+        game.add_cell(pos=(game.dim - 1 ,game.dim - 1))
+        #test that cells being returned are inside dimensions
+        for pos in game.pos_to_analize():
+            self.assertTrue(pos[0] <= xmax and pos[1] <= ymax)
 
-  # def test_upper(self):
-  #     self.assertEqual('foo'.upper(), 'FOO')
-  #
-  # def test_isupper(self):
-  #     self.assertTrue('FOO'.isupper())
-  #     self.assertFalse('Foo'.isupper())
-  #
-  # def test_split(self):
-  #     s = 'hello world'
-  #     self.assertEqual(s.split(), ['hello', 'world'])
-  #     # check that s.split fails when the separator is not a string
-  #     with self.assertRaises(TypeError):
-  #         s.split(2)
 
 if __name__ == '__main__':
     unittest.main()
