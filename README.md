@@ -32,6 +32,8 @@ while True:
 ```
 
 ## Screenshots:
-
-![Alt text](/img1.png?raw=true "Optional Title")
+First Generation
+![Alt text](/img1.png?raw=true "First generation")
+Second Generation
+![Alt text](/img2.png?raw=true "Second generation")
   
