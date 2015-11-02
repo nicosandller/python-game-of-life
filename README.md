@@ -14,11 +14,17 @@ To create a new board `Board(dimension)`
 |`.show()`| Shows the board with living cells marked with an 'X'.| **Takes no argument** |
 
 
+## Running Test:
+
+```command-line
+python test_app.py
+```
+
 ## Sample Code:
 
 ```python
 from board import Board
-import time 
+import time
 
 game = Board(15)
 game.insert_blinker()
@@ -36,4 +42,3 @@ First Generation
 ![Alt text](/img1.png?raw=true "First generation")
 Second Generation
 ![Alt text](/img2.png?raw=true "Second generation")
-  
