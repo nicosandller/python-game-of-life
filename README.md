@@ -17,6 +17,7 @@ To create a new board `Board(dimension)`
 ## Sample Code:
 
 ```python
+from board import Board
 import time 
 
 game = Board(15)
