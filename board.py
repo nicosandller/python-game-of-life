@@ -44,15 +44,18 @@ class Board(object):
     def neighbours(self, pos):
         #Returns neighbour locations for a provided position
         neighbours = set()
-        neighbours.add((pos[0],pos[1]+1))
-        neighbours.add((pos[0]+1,pos[1]))
-        neighbours.add((pos[0]+1,pos[1]+1))
+        if pos[0] < self.dim and pos[1] < self.dim:
+            neighbours.add((pos[0]+1,pos[1]+1))
+            neighbours.add((pos[0],pos[1]+1))
+            neighbours.add((pos[0]+1,pos[1]))
         if pos[0] > 0:
             neighbours.add((pos[0]-1,pos[1]))
-            neighbours.add((pos[0]-1,pos[1]+1))
+            if pos[1] < self.dim:
+                neighbours.add((pos[0]-1,pos[1]+1))
         if pos[1] > 0:
             neighbours.add((pos[0],pos[1]-1))
-            neighbours.add((pos[0]+1,pos[1]-1))
+            if pos[0] < self.dim:
+                neighbours.add((pos[0]+1,pos[1]-1))
         if pos[0] > 0 and pos[1] > 0:
             neighbours.add((pos[0]-1,pos[1]-1))
         return neighbours
