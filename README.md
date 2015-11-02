@@ -1,11 +1,11 @@
 # python-game-of-life
-Python object-oriented TDD implementation of Conway's game of life.
+### Python object-oriented TDD implementation of Conway's game of life.
 
 
 To create a new board `Board(dimension)`
 
 | Method        | Description           | Arguments  |
-| ------------- |:-------------:| ------|
+| ------------- |:-------------:| ----------|
 |`.add_cell(pos = (x,y))`| Adds an alive cell at the defined position| pos = (x,y) |
 |`.insert_random_cells(n)`| Adds n alive cells at random positions| n = number |
 |`.insert_blinker()`| Inserts a Blinker figure to the board at a random position| **Takes no argument** |
@@ -14,10 +14,9 @@ To create a new board `Board(dimension)`
 |`.show()`| Shows the board with living cells marked with an 'X'.| **Takes no argument** |
 
 
+## Sample Code:
 
 ```python
-Sample Code:
-
 import time 
 
 game = Board(15)
